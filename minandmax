@@ -1,0 +1,23 @@
+def min(a):
+    a = iter(a)
+    min = a.next()
+    for i in a:
+        if i < min:
+            min = i
+    return min
+    
+def max(a):
+    a = iter(a)
+    max = a.next()
+    for i in a:
+        if i > max:
+           max = i
+    return max
+    
+def find_max_min(a):
+  result = []
+  if (len(set(a)) <= 1):
+    result.append(len(a))
+    return result
+  else:
+   return [min(a), max(a)]
