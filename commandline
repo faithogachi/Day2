@@ -1,0 +1,13 @@
+import requests
+
+def main(str):
+	res = requests.get(str)
+
+	if res.status_code != 200:
+		print("Error encountered in getting the data")
+	else:
+		print(res.json())
+
+
+
+main('http://jsonplaceholder.typicode.com/posts/1')
